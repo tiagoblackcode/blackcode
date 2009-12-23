@@ -8,9 +8,19 @@
 
 #import "MTPlayerView.h"
 
-float kTrackingAreaPadding = 5.0;
+#define kFadePeriod 0.05
 
 @implementation MTPlayerView
+
+@synthesize cachedView;
+
++ (void)initialize
+{
+	
+	[self exposeBinding:@"backgroundColor"];
+	[self exposeBinding:@"minAlphaValue"];
+	[self exposeBinding:@"maxAlphaValue"];
+}
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -22,15 +32,48 @@ float kTrackingAreaPadding = 5.0;
 									 options:(NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways | NSTrackingMouseMoved) 
 									   owner:self 
 									userInfo:nil];
+
+		cachedView = nil;
 		minAlphaValue = 0.0;
 		maxAlphaValue = 1.0;
-		[self cacheView];
-		[self setAlphaValue:minAlphaValue];
+		alphaInc = (maxAlphaValue - minAlphaValue) * kFadePeriod;
 		[self addTrackingArea:trackingArea];
+		
 	}
 	return self;
 	
 }
+
+- (void)setBackgroundColor:(NSColor *)new
+{
+
+	[new retain];
+	[backgroundColor release];
+	backgroundColor = new;
+	[self setCachedView:nil];
+	[self setNeedsDisplay:YES];
+	
+}
+
+- (void)setMaxAlphaValue:(float)new
+{
+	maxAlphaValue = new;
+	alphaInc = (maxAlphaValue - minAlphaValue) * kFadePeriod;
+	[self setNeedsDisplay:YES];
+}
+
+- (void)setMinAlphaValue:(float)new
+{
+
+	minAlphaValue = new;
+	alphaInc = (maxAlphaValue - minAlphaValue) * 0.05;
+	[self setAlphaValue:minAlphaValue];
+	[self setNeedsDisplay:YES];
+}
+
+- (NSColor*)backgroundColor { return backgroundColor; }
+- (float)minAlphaValue { return minAlphaValue; }
+- (float)maxAlphaValue { return maxAlphaValue; }
 
 - (void)updateTrackingAreas
 {
@@ -83,7 +126,7 @@ float kTrackingAreaPadding = 5.0;
 	cachedView = [[NSImage alloc] initWithSize:frame.size];
 	[cachedView lockFocus];
 		[[NSColor whiteColor] setStroke];
-		[[[NSColor blackColor] colorWithAlphaComponent:0.5] setFill];
+		[[backgroundColor colorWithAlphaComponent:0.5] setFill];
 		NSBezierPath *path = [[NSBezierPath alloc] init];	
 
 		[path appendBezierPathWithRoundedRect:frame xRadius:10 yRadius:10];
@@ -98,7 +141,7 @@ float kTrackingAreaPadding = 5.0;
 	if( [self alphaValue] >= maxAlphaValue)
 		return;
 	
-	NSNumber *number = [NSNumber numberWithFloat:0.05];
+	NSNumber *number = [NSNumber numberWithFloat:alphaInc];
 	[fadeTimer invalidate];
 	fadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.010 
 												 target:self 
@@ -111,7 +154,7 @@ float kTrackingAreaPadding = 5.0;
 	if( [self alphaValue] <= minAlphaValue )
 		return;
 	
-	NSNumber *number = [NSNumber numberWithFloat:-0.05];
+	NSNumber *number = [NSNumber numberWithFloat:-1*alphaInc];
 	[fadeTimer invalidate];
 	fadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.010 
 												 target:self 
@@ -142,6 +185,9 @@ float kTrackingAreaPadding = 5.0;
 - (void)drawRect:(NSRect)rect
 {
 	//[super drawRect:rect];
+	if( [self cachedView] == nil )
+		[self cacheView];
+	
 	[cachedView drawInRect:rect fromRect:NSZeroRect operation:NSCompositeCopy fraction:[self alphaValue]];	
 }
 

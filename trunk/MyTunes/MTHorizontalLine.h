@@ -10,7 +10,12 @@
 
 
 @interface MTHorizontalLine : NSBox {
+	
+	NSColor *lineColor;
 
 }
+
+- (void)setLineColor:(NSColor *)newColor;
+- (NSColor*)lineColor;
 
 @end

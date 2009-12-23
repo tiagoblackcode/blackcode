@@ -10,6 +10,7 @@
 #import <EyeTunes/EyeTunes.h>
 
 #import "MTUtils.h"
+#import "MTPreferencesController.h"
 #import "MTPlayerController.h"
 #import "MTPlayerView.h"
 #import "MTCloseButtonView.h"
@@ -164,6 +165,11 @@ const float kHorizontalLinePadding = 10.0;
 - (void)windowDidLoad
 {
 	NSLog(@"windowDidLoad:");
+
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSUserDefaultsController *controller = [NSUserDefaultsController sharedUserDefaultsController];
+
 	playerView = [[MTPlayerView alloc] initWithFrame:[[[self window] contentView] frame]] ;
 	
 	NSRect buttonRect = NSMakeRect(6.0, [[[self window] contentView] frame].size.height - 19.0, 13.0, 13.0);
@@ -173,14 +179,44 @@ const float kHorizontalLinePadding = 10.0;
 	[[[self window] contentView] addSubview:playerView positioned:NSWindowBelow relativeTo:nil];
 	
 	
+	[playerView setMinAlphaValue:[[defaults objectForKey:kPlayerViewMinOpacityKey] floatValue]];
+	[playerView setMaxAlphaValue:[[defaults objectForKey:kPlayerViewMaxOpacityKey] floatValue]];
+
+	[horizontalLine bind:@"lineColor"
+				toObject:controller
+			 withKeyPath:@"values.kPlayerTextColor"
+				 options:[NSDictionary dictionaryWithObject:NSUnarchiveFromDataTransformerName forKey:NSValueTransformerNameBindingOption]];
+	
+	
+	[playerView bind:@"minAlphaValue"
+			toObject:controller
+		 withKeyPath:@"values.kPlayerMinOpacity"
+			 options:nil];
+	
+	[playerView bind:@"maxAlphaValue"
+			toObject:controller
+		 withKeyPath:@"values.kPlayerMaxOpacity"
+			 options:nil];
+	
+	[playerView bind:@"backgroundColor"
+			toObject:controller
+		 withKeyPath:@"values.kPlayerBackgroundColor"
+			 options:[NSDictionary dictionaryWithObject:NSUnarchiveFromDataTransformerName forKey:NSValueTransformerNameBindingOption]];
+			 //options:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"NSContinuouslyUpdateValues"]];
+
+	
 	[closeButton setTarget:[self window]];
 	[closeButton setAction:@selector(orderOut:)];
-    [closeButton release];	
 	
 	
 	[artworkImage setImage:defaultArtwork];
+	[[self window] display];
+	
+	
 	[updateTimer fire];
 	[[NSRunLoop currentRunLoop] addTimer:updateTimer forMode:NSDefaultRunLoopMode];
+	[pool drain];
+
 }
 
 

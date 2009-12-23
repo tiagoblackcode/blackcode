@@ -11,17 +11,25 @@
 
 @interface MTPlayerView : NSView {
 	
+	NSColor *backgroundColor;
 	NSImage *cachedView;
 	NSTrackingArea *trackingArea;
 	NSTimer *fadeTimer;
 	
 	float minAlphaValue;
 	float maxAlphaValue;
+	float alphaInc;
 
 }
 
+- (void)cacheView;
 - (void)fadeIn;
 - (void)fadeOut;
-- (void)cacheView;
+
+
+@property (assign) float minAlphaValue;
+@property (assign) float maxAlphaValue;
+@property (retain) NSImage *cachedView;
+@property (retain) NSColor *backgroundColor;
 
 @end

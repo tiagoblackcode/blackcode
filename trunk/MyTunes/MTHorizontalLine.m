@@ -11,10 +11,32 @@
 
 @implementation MTHorizontalLine
 
+
+
++ (void)initialize
+{
+	[self exposeBinding:@"lineColor"];
+	
+}
+
+- (void)setLineColor:(NSColor *)new
+{
+	[new retain];
+	[lineColor release];
+	lineColor = new;
+	[self setNeedsDisplay:YES];
+}
+
+- (NSColor*)lineColor
+{
+	return lineColor;
+}
+	
+
 - (void)drawRect:(NSRect)dirtyRect
 {
 	NSBezierPath *path = [NSBezierPath bezierPath];
-	[[NSColor whiteColor] setStroke];
+	[lineColor setStroke];
 	[path setLineWidth:3.0];
 	[path setLineCapStyle:NSRoundLineCapStyle];
 	[path moveToPoint:NSMakePoint(NSMinX(dirtyRect), NSMaxY(dirtyRect))];
