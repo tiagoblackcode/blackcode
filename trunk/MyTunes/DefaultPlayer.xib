@@ -51,16 +51,16 @@
 						<object class="NSTextField" id="55568479">
 							<reference key="NSNextResponder" ref="124129007"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{120, 89}, {264, 18}}</string>
+							<string key="NSFrame">{{120, 88}, {264, 19}}</string>
 							<reference key="NSSuperview" ref="124129007"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="354528220">
 								<int key="NSCellFlags">67239488</int>
 								<int key="NSCellFlags2">4196352</int>
-								<string key="NSContents"/>
+								<string key="NSContents">Track</string>
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande-Bold</string>
-									<double key="NSSize">1.400000e+01</double>
+									<double key="NSSize">1.600000e+01</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<reference key="NSControlView" ref="55568479"/>
@@ -82,17 +82,17 @@
 						<object class="NSTextField" id="293918736">
 							<reference key="NSNextResponder" ref="124129007"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{120, 56}, {264, 17}}</string>
+							<string key="NSFrame">{{120, 55}, {264, 18}}</string>
 							<reference key="NSSuperview" ref="124129007"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="721781074">
 								<int key="NSCellFlags">67239488</int>
 								<int key="NSCellFlags2">272631808</int>
-								<string key="NSContents"/>
-								<object class="NSFont" key="NSSupport" id="814327376">
-									<string key="NSName">LucidaGrande</string>
-									<double key="NSSize">1.300000e+01</double>
-									<int key="NSfFlags">1044</int>
+								<string key="NSContents">Album</string>
+								<object class="NSFont" key="NSSupport" id="16958390">
+									<string key="NSName">LucidaGrande-Bold</string>
+									<double key="NSSize">1.400000e+01</double>
+									<int key="NSfFlags">16</int>
 								</object>
 								<reference key="NSControlView" ref="293918736"/>
 								<reference key="NSBackgroundColor" ref="765382244"/>
@@ -102,14 +102,14 @@
 						<object class="NSTextField" id="171125990">
 							<reference key="NSNextResponder" ref="124129007"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{120, 31}, {264, 17}}</string>
+							<string key="NSFrame">{{120, 30}, {264, 18}}</string>
 							<reference key="NSSuperview" ref="124129007"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="976028384">
 								<int key="NSCellFlags">67239488</int>
 								<int key="NSCellFlags2">272631808</int>
-								<string key="NSContents"/>
-								<reference key="NSSupport" ref="814327376"/>
+								<string key="NSContents">Artist</string>
+								<reference key="NSSupport" ref="16958390"/>
 								<reference key="NSControlView" ref="171125990"/>
 								<reference key="NSBackgroundColor" ref="765382244"/>
 								<reference key="NSTextColor" ref="1010916703"/>
@@ -122,6 +122,13 @@
 							<reference key="NSSuperview" ref="124129007"/>
 							<string key="NSClassName">MTImageView</string>
 						</object>
+						<object class="NSCustomView" id="991359765">
+							<reference key="NSNextResponder" ref="124129007"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{123, 6}, {103, 17}}</string>
+							<reference key="NSSuperview" ref="124129007"/>
+							<string key="NSClassName">MTStarView</string>
+						</object>
 						<object class="NSBox" id="67518896">
 							<reference key="NSNextResponder" ref="124129007"/>
 							<int key="NSvFlags">12</int>
@@ -132,7 +139,11 @@
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents">Box</string>
-								<reference key="NSSupport" ref="814327376"/>
+								<object class="NSFont" key="NSSupport">
+									<string key="NSName">LucidaGrande</string>
+									<double key="NSSize">1.300000e+01</double>
+									<int key="NSfFlags">1044</int>
+								</object>
 								<object class="NSColor" key="NSBackgroundColor">
 									<int key="NSColorSpace">6</int>
 									<string key="NSCatalogName">System</string>
@@ -331,6 +342,7 @@
 							<reference ref="67518896"/>
 							<reference ref="293918736"/>
 							<reference ref="171125990"/>
+							<reference ref="991359765"/>
 						</object>
 						<reference key="parent" ref="241269470"/>
 					</object>
@@ -394,6 +406,11 @@
 						<reference key="object" ref="981064473"/>
 						<reference key="parent" ref="554158957"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">109</int>
+						<reference key="object" ref="991359765"/>
+						<reference key="parent" ref="124129007"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -402,6 +419,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>-3.IBPluginDependency</string>
 					<string>10.IBPluginDependency</string>
+					<string>109.IBPluginDependency</string>
 					<string>11.IBPluginDependency</string>
 					<string>12.IBPluginDependency</string>
 					<string>21.IBPluginDependency</string>
@@ -423,9 +441,10 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{94, 438}, {401, 127}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{94, 438}, {401, 127}}</string>
+					<string>{{45, 560}, {401, 127}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{45, 560}, {401, 127}}</string>
 					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>MTHorizontalLine</string>
@@ -455,7 +474,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">105</int>
+			<int key="maxID">109</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -519,6 +538,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">MTSliderView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">MTStarView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">MTStarView.h</string>
 					</object>
 				</object>
 			</object>

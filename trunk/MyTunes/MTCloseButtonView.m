@@ -26,4 +26,9 @@
 	return self;
 }
 
+- (void)drawRect:(NSRect)rect
+{
+	[[self image] drawInRect:rect fromRect:NSZeroRect operation:NSCompositeSourceIn fraction:[self alphaValue]];
+}
+
 @end

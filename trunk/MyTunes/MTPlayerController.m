@@ -26,7 +26,7 @@ const float kHorizontalLinePadding = 10.0;
 
 @interface MTPlayerController (Private)
 
-- (NSImage*)defaultArtwork;
+- (NSImage*)loadDefaultArtwork;
 - (void)update:(NSTimer*)timer;
 - (void)updateTrack;
 - (void)updateArtwork;
@@ -45,7 +45,7 @@ const float kHorizontalLinePadding = 10.0;
 	if( self ) {
 		playerView = nil;
 		currentTrack = nil;
-		defaultArtwork = [self defaultArtwork];
+		defaultArtwork = nil;
 		needsUpdate = YES;
 		updateTimer = [NSTimer timerWithTimeInterval:1.0
 											  target:self 
@@ -121,19 +121,21 @@ const float kHorizontalLinePadding = 10.0;
 
 - (void)updateArtwork
 {
+	float reflected = ([artworkImage frame].size.height / [artworkImage frame].size.width) - 1;
 	NSArray *artwork = [currentTrack artwork];
 	if( [artwork count] ) {
-		NSImage *ref = [NSImage imageWithReflection:[artwork objectAtIndex:0] amountReflected:0.3];
+		NSImage *ref = [NSImage imageWithReflection:[artwork objectAtIndex:0] amountReflected:reflected];
 		[artworkImage changeImageTo:ref];
 	} else {
 		[artworkImage changeImageTo:defaultArtwork];
 	}
 }
 
-- (NSImage*)defaultArtwork
+- (NSImage*)loadDefaultArtwork
 {
+	float reflected = ([artworkImage frame].size.height / [artworkImage frame].size.width) - 1;
 	NSImage *img = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForImageResource:kDefaultArtworkFilename]];
-	NSImage *result = [NSImage imageWithReflection:img amountReflected:0.3];
+	NSImage *result = [NSImage imageWithReflection:img amountReflected:reflected];
 	[img release];
 	return result;
 }
@@ -180,6 +182,7 @@ const float kHorizontalLinePadding = 10.0;
 
 	playerView = [[MTHUDView alloc] initWithFrame:[[[self window] contentView] frame]] ;
 	
+	
 	NSRect buttonRect = NSMakeRect(6.0, [[[self window] contentView] frame].size.height - 19.0, 13.0, 13.0);
 	closeButton = [[MTCloseButtonView alloc] initWithFrame:buttonRect];
 	
@@ -189,7 +192,7 @@ const float kHorizontalLinePadding = 10.0;
 	[closeButton setTarget:[self window]];
 	[closeButton setAction:@selector(orderOut:)];
 	
-	
+	defaultArtwork = [self loadDefaultArtwork];
 	[artworkImage setImage:defaultArtwork];
 	[self configureBindings];
 

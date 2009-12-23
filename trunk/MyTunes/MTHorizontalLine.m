@@ -37,7 +37,7 @@
 {
 	NSBezierPath *path = [NSBezierPath bezierPath];
 	[lineColor setStroke];
-	[path setLineWidth:3.0];
+	[path setLineWidth:2.0];
 	[path setLineCapStyle:NSRoundLineCapStyle];
 	[path moveToPoint:NSMakePoint(NSMinX(dirtyRect), NSMaxY(dirtyRect))];
 	[path lineToPoint:NSMakePoint(NSMaxX(dirtyRect), NSMaxY(dirtyRect))];

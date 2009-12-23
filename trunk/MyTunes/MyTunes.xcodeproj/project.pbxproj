@@ -29,6 +29,9 @@
 		F15EE0E310DD6B5400A471F1 /* MTHorizontalLine.m in Sources */ = {isa = PBXBuildFile; fileRef = F15EE0E210DD6B5400A471F1 /* MTHorizontalLine.m */; };
 		F19A481410DC435B00DF5287 /* MTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19A481310DC435B00DF5287 /* MTInfoView.m */; };
 		F1A9176D10DEAB1A007D37E4 /* MTUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = F1A9176C10DEAB1A007D37E4 /* MTUtils.c */; };
+		F1B3697B10E2A42500CEBAA4 /* ratingDot.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B3697910E2A42500CEBAA4 /* ratingDot.png */; };
+		F1B3697C10E2A42500CEBAA4 /* ratingStar.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B3697A10E2A42500CEBAA4 /* ratingStar.png */; };
+		F1B3698F10E2A5ED00CEBAA4 /* MTStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B3698E10E2A5ED00CEBAA4 /* MTStarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +88,10 @@
 		F19A481310DC435B00DF5287 /* MTInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTInfoView.m; sourceTree = "<group>"; };
 		F1A9176B10DEAB1A007D37E4 /* MTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUtils.h; sourceTree = "<group>"; };
 		F1A9176C10DEAB1A007D37E4 /* MTUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MTUtils.c; sourceTree = "<group>"; };
+		F1B3697910E2A42500CEBAA4 /* ratingDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratingDot.png; sourceTree = "<group>"; };
+		F1B3697A10E2A42500CEBAA4 /* ratingStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratingStar.png; sourceTree = "<group>"; };
+		F1B3698D10E2A5ED00CEBAA4 /* MTStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStarView.h; sourceTree = "<group>"; };
+		F1B3698E10E2A5ED00CEBAA4 /* MTStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +172,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F1B3697910E2A42500CEBAA4 /* ratingDot.png */,
+				F1B3697A10E2A42500CEBAA4 /* ratingStar.png */,
 				F15EDD1A10DB221200A471F1 /* default-artwork.png */,
 				F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -211,6 +220,8 @@
 				F19A481310DC435B00DF5287 /* MTInfoView.m */,
 				F15EE0E110DD6B5400A471F1 /* MTHorizontalLine.h */,
 				F15EE0E210DD6B5400A471F1 /* MTHorizontalLine.m */,
+				F1B3698D10E2A5ED00CEBAA4 /* MTStarView.h */,
+				F1B3698E10E2A5ED00CEBAA4 /* MTStarView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -292,6 +303,8 @@
 				F12DD8EE10DA99CD00747F73 /* DefaultPlayer.xib in Resources */,
 				F15EDCFA10DB13AF00A471F1 /* hud_titlebar-close.tiff in Resources */,
 				F15EDD1B10DB221200A471F1 /* default-artwork.png in Resources */,
+				F1B3697B10E2A42500CEBAA4 /* ratingDot.png in Resources */,
+				F1B3697C10E2A42500CEBAA4 /* ratingStar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +328,7 @@
 				F19A481410DC435B00DF5287 /* MTInfoView.m in Sources */,
 				F15EE0E310DD6B5400A471F1 /* MTHorizontalLine.m in Sources */,
 				F1A9176D10DEAB1A007D37E4 /* MTUtils.c in Sources */,
+				F1B3698F10E2A5ED00CEBAA4 /* MTStarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
