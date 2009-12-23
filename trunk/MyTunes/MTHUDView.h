@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MTCloseButtonView.h"
 
-@interface MTPlayerView : NSView {
+@interface MTHUDView : NSView {
 	
 	NSColor *backgroundColor;
 	NSImage *cachedView;

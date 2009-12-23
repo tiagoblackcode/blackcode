@@ -20,7 +20,7 @@
 	aStyle = NSBorderlessWindowMask;
 	self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
 	if( self ) {		
-//		[self setLevel:kCGDesktopWindowLevel];
+		[self setLevel:kCGDesktopWindowLevel];
 		[self setShouldTerminateApplication:YES];
 		[self setBackgroundColor:[NSColor clearColor]];
 		[self setOpaque:NO];

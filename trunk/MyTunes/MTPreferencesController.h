@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-extern NSString *kPlayerTextColorKey;
-extern NSString *kPlayerBackgroundColorKey;
-extern NSString *kPlayerViewMinOpacityKey;
-extern NSString *kPlayerViewMaxOpacityKey;
+extern NSString const *kPlayerTextColorKey;
+extern NSString const *kPlayerBackgroundColorKey;
+extern NSString const *kPlayerViewMinOpacityKey;
+extern NSString const *kPlayerViewMaxOpacityKey;
+extern NSString const *kPlayerUpdateTimeKey;
 
 @interface MTPreferencesController : NSWindowController {
 

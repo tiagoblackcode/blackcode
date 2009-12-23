@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @class MTCloseButtonView;
-@class MTPlayerView;
+@class MTHUDView;
 @class MTHorizontalLine;
 @class MTSliderView;
 @class MTImageView;
@@ -18,7 +18,7 @@
 @interface MTPlayerController : NSWindowController {
 
 	MTCloseButtonView *closeButton;
-	MTPlayerView *playerView;
+	MTHUDView *playerView;
 	IBOutlet MTImageView *artworkImage;
 	IBOutlet MTSliderView *sliderView;
 	IBOutlet MTHorizontalLine *horizontalLine;

@@ -26,21 +26,4 @@
 	return self;
 }
 
-
-
-
-//- (void)drawRect:(NSRect)rect
-//{
-//	
-////	NSImage *buttonImage = [[NSImage alloc] initWithSize:rect.size];
-////	[buttonImage lockFocus];
-////		NSRectFill(rect);
-//		[super drawRect:rect];
-////		[[NSColor whiteColor] setStroke];
-////	[buttonImage unlockFocus];
-////	[buttonImage drawInRect:rect fromRect:NSZeroRect operation:NSCompositeSourceAtop fraction:1.0];
-////	[buttonImage release];
-//	
-//}
-
 @end

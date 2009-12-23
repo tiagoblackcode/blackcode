@@ -12,7 +12,7 @@
 #import "MTUtils.h"
 #import "MTPreferencesController.h"
 #import "MTPlayerController.h"
-#import "MTPlayerView.h"
+#import "MTHUDView.h"
 #import "MTCloseButtonView.h"
 #import "MTImageView.h"
 #import "MTHorizontalLine.h"
@@ -31,6 +31,7 @@ const float kHorizontalLinePadding = 10.0;
 - (void)updateTrack;
 - (void)updateArtwork;
 - (void)resizeControls;
+- (void)configureBindings;
 
 @end
 
@@ -46,7 +47,7 @@ const float kHorizontalLinePadding = 10.0;
 		currentTrack = nil;
 		defaultArtwork = [self defaultArtwork];
 		needsUpdate = YES;
-		updateTimer = [NSTimer timerWithTimeInterval:0.5 
+		updateTimer = [NSTimer timerWithTimeInterval:1.0
 											  target:self 
 											selector:@selector(update:) 
 											userInfo:nil 
@@ -54,6 +55,11 @@ const float kHorizontalLinePadding = 10.0;
 	}
 	return self;
 }
+
+
+
+
+#pragma mark Update Methods
 
 - (void)update:(NSTimer*)timer
 {
@@ -66,36 +72,9 @@ const float kHorizontalLinePadding = 10.0;
 	if( needsUpdate ) {
 		[self updateTrack];	
 		[[[self window] contentView] setNeedsDisplay:YES];
+		[[self window] invalidateShadow];
 	}
 	needsUpdate = NO;
-}
-
-- (void)resizeControls
-{
-	[trackTextView sizeToFit];
-	[artistTextView sizeToFit];
-	[albumTextView sizeToFit];
-
-	
-	float maxWidth, originX, paddingX;
-	
-	paddingX = [artworkImage frame].origin.x;
-	originX = [trackTextView frame].origin.x;
-	maxWidth = MTMax( [trackTextView frame].size.width + kHorizontalLinePadding, kHorizontalLineMinWidth );
-	[horizontalLine setFrameSize:NSMakeSize(maxWidth, [horizontalLine frame].size.height)];
-	
-	
-	maxWidth = MTMax( maxWidth, [trackTextView frame].size.width );
-	maxWidth = MTMax( maxWidth, [artistTextView frame].size.width );
-	maxWidth = MTMax( maxWidth, [albumTextView frame].size.width );
-	
-	NSRect wframe = [[self window] frame];
-	wframe.size.width = maxWidth + originX + paddingX;	
-	
-	[playerView setFrameSize:wframe.size];
-	[[self window] setFrame:wframe display:YES animate:NO];
-	
-
 }
 
 - (void)updateTrack
@@ -159,29 +138,70 @@ const float kHorizontalLinePadding = 10.0;
 	return result;
 }
 
+- (void)resizeControls
+{
+	[trackTextView sizeToFit];
+	[artistTextView sizeToFit];
+	[albumTextView sizeToFit];
+	
+	
+	float maxWidth, originX, paddingX;
+	
+	paddingX = [artworkImage frame].origin.x;
+	originX = [trackTextView frame].origin.x;
+	maxWidth = MTMax( [trackTextView frame].size.width + kHorizontalLinePadding, kHorizontalLineMinWidth );
+	[horizontalLine setFrameSize:NSMakeSize(maxWidth, [horizontalLine frame].size.height)];
+	
+	
+	maxWidth = MTMax( maxWidth, [trackTextView frame].size.width );
+	maxWidth = MTMax( maxWidth, [artistTextView frame].size.width );
+	maxWidth = MTMax( maxWidth, [albumTextView frame].size.width );
+	
+	NSRect wframe = [[self window] frame];
+	wframe.size.width = maxWidth + originX + paddingX;	
+	
+	[playerView setFrameSize:wframe.size];
+	[[self window] setFrame:wframe display:YES animate:NO];
+	
+	
+}
 
 
+
+#pragma mark Window Notifications
 
 - (void)windowDidLoad
 {
 	NSLog(@"windowDidLoad:");
 
+	
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	NSUserDefaultsController *controller = [NSUserDefaultsController sharedUserDefaultsController];
+	[[self window] setFrameAutosaveName:@"PlayerWindow"];
 
-	playerView = [[MTPlayerView alloc] initWithFrame:[[[self window] contentView] frame]] ;
+	playerView = [[MTHUDView alloc] initWithFrame:[[[self window] contentView] frame]] ;
 	
 	NSRect buttonRect = NSMakeRect(6.0, [[[self window] contentView] frame].size.height - 19.0, 13.0, 13.0);
 	closeButton = [[MTCloseButtonView alloc] initWithFrame:buttonRect];
 	
 	[playerView addSubview:closeButton];
 	[[[self window] contentView] addSubview:playerView positioned:NSWindowBelow relativeTo:nil];
-	
-	
-	[playerView setMinAlphaValue:[[defaults objectForKey:kPlayerViewMinOpacityKey] floatValue]];
-	[playerView setMaxAlphaValue:[[defaults objectForKey:kPlayerViewMaxOpacityKey] floatValue]];
 
+	[closeButton setTarget:[self window]];
+	[closeButton setAction:@selector(orderOut:)];
+	
+	
+	[artworkImage setImage:defaultArtwork];
+	[self configureBindings];
+
+	
+	[[NSRunLoop currentRunLoop] addTimer:updateTimer forMode:NSDefaultRunLoopMode];
+	[pool drain];
+
+}
+
+- (void)configureBindings
+{
+	NSUserDefaultsController *controller = [NSUserDefaultsController sharedUserDefaultsController];
 	[horizontalLine bind:@"lineColor"
 				toObject:controller
 			 withKeyPath:@"values.kPlayerTextColor"
@@ -190,33 +210,21 @@ const float kHorizontalLinePadding = 10.0;
 	
 	[playerView bind:@"minAlphaValue"
 			toObject:controller
-		 withKeyPath:@"values.kPlayerMinOpacity"
+		 withKeyPath:@"values.kPlayerViewMinOpacity"
 			 options:nil];
 	
 	[playerView bind:@"maxAlphaValue"
 			toObject:controller
-		 withKeyPath:@"values.kPlayerMaxOpacity"
+		 withKeyPath:@"values.kPlayerViewMaxOpacity"
 			 options:nil];
 	
 	[playerView bind:@"backgroundColor"
 			toObject:controller
 		 withKeyPath:@"values.kPlayerBackgroundColor"
 			 options:[NSDictionary dictionaryWithObject:NSUnarchiveFromDataTransformerName forKey:NSValueTransformerNameBindingOption]];
-			 //options:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"NSContinuouslyUpdateValues"]];
-
-	
-	[closeButton setTarget:[self window]];
-	[closeButton setAction:@selector(orderOut:)];
+	//options:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"NSContinuouslyUpdateValues"]];
 	
 	
-	[artworkImage setImage:defaultArtwork];
-	[[self window] display];
-	
-	
-	[updateTimer fire];
-	[[NSRunLoop currentRunLoop] addTimer:updateTimer forMode:NSDefaultRunLoopMode];
-	[pool drain];
-
 }
 
 

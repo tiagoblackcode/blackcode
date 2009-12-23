@@ -17,7 +17,7 @@
 		F12DD8EB10DA997800747F73 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12DD8EA10DA997800747F73 /* Preferences.xib */; };
 		F12DD8EE10DA99CD00747F73 /* DefaultPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12DD8ED10DA99CD00747F73 /* DefaultPlayer.xib */; };
 		F12DD96010DA9D1C00747F73 /* MTPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */; };
-		F12DD96610DA9E9300747F73 /* MTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD96510DA9E9300747F73 /* MTPlayerView.m */; };
+		F12DD96610DA9E9300747F73 /* MTHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD96510DA9E9300747F73 /* MTHUDView.m */; };
 		F12DD9AD10DAA07000747F73 /* MTCloseButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD9AC10DAA07000747F73 /* MTCloseButtonView.m */; };
 		F15EDCFA10DB13AF00A471F1 /* hud_titlebar-close.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */; };
 		F15EDD1B10DB221200A471F1 /* default-artwork.png in Resources */ = {isa = PBXBuildFile; fileRef = F15EDD1A10DB221200A471F1 /* default-artwork.png */; };
@@ -66,8 +66,8 @@
 		F12DD8ED10DA99CD00747F73 /* DefaultPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultPlayer.xib; sourceTree = "<group>"; };
 		F12DD95E10DA9D1C00747F73 /* MTPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlayerWindow.h; sourceTree = "<group>"; };
 		F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlayerWindow.m; sourceTree = "<group>"; };
-		F12DD96410DA9E9300747F73 /* MTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlayerView.h; sourceTree = "<group>"; };
-		F12DD96510DA9E9300747F73 /* MTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlayerView.m; sourceTree = "<group>"; };
+		F12DD96410DA9E9300747F73 /* MTHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHUDView.h; sourceTree = "<group>"; };
+		F12DD96510DA9E9300747F73 /* MTHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHUDView.m; sourceTree = "<group>"; };
 		F12DD9AB10DAA07000747F73 /* MTCloseButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCloseButtonView.h; sourceTree = "<group>"; };
 		F12DD9AC10DAA07000747F73 /* MTCloseButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCloseButtonView.m; sourceTree = "<group>"; };
 		F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_titlebar-close.tiff"; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 			children = (
 				F12DD95E10DA9D1C00747F73 /* MTPlayerWindow.h */,
 				F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */,
-				F12DD96410DA9E9300747F73 /* MTPlayerView.h */,
-				F12DD96510DA9E9300747F73 /* MTPlayerView.m */,
+				F12DD96410DA9E9300747F73 /* MTHUDView.h */,
+				F12DD96510DA9E9300747F73 /* MTHUDView.m */,
 				F12DD9AB10DAA07000747F73 /* MTCloseButtonView.h */,
 				F12DD9AC10DAA07000747F73 /* MTCloseButtonView.m */,
 				F15EDEBA10DBD93B00A471F1 /* MTImageView.h */,
@@ -307,7 +307,7 @@
 				F12DD8E610DA987500747F73 /* MTPreferencesController.m in Sources */,
 				F12DD8E910DA98D600747F73 /* MTPlayerController.m in Sources */,
 				F12DD96010DA9D1C00747F73 /* MTPlayerWindow.m in Sources */,
-				F12DD96610DA9E9300747F73 /* MTPlayerView.m in Sources */,
+				F12DD96610DA9E9300747F73 /* MTHUDView.m in Sources */,
 				F12DD9AD10DAA07000747F73 /* MTCloseButtonView.m in Sources */,
 				F15EDD8010DB23CD00A471F1 /* NSImage+Additions.m in Sources */,
 				F15EDEBC10DBD93B00A471F1 /* MTImageView.m in Sources */,

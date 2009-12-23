@@ -8,10 +8,13 @@
 
 #import "MTPreferencesController.h"
 
-NSString *kPlayerTextColorKey = @"kPlayerTextColor";
-NSString *kPlayerBackgroundColorKey = @"kPlayerBackgroundColor";
-NSString *kPlayerViewMinOpacityKey = @"kPlayerViewMinOpacity";
-NSString *kPlayerViewMaxOpacityKey = @"kPlayerViewMaxOpacity";
+NSString const *kPlayerTextColorKey = @"kPlayerTextColor";
+NSString const *kPlayerBackgroundColorKey = @"kPlayerBackgroundColor";
+NSString const *kPlayerViewMinOpacityKey = @"kPlayerViewMinOpacity";
+NSString const *kPlayerViewMaxOpacityKey = @"kPlayerViewMaxOpacity";
+NSString const *kPlayerUpdateTimeKey = @"kPlayerUpdateTime";
+NSString const *kPlayerPositionX = @"kPlayerPositionX";
+NSString const *kPlayerPositionY = @"kPlayerPositionY";
 
 
 
@@ -32,12 +35,13 @@ NSString *kPlayerViewMaxOpacityKey = @"kPlayerViewMaxOpacity";
 	NSData *backgroundColor = [NSArchiver archivedDataWithRootObject:[NSColor blackColor]];
 	NSNumber *minOpacity = [NSNumber numberWithFloat:0.0];
 	NSNumber *maxOpacity = [NSNumber numberWithFloat:1.0];
+	NSNumber *updateTime = [NSNumber numberWithFloat:600];
 	
 	[dict setObject:textColor forKey:kPlayerTextColorKey];
 	[dict setObject:backgroundColor forKey:kPlayerBackgroundColorKey];
 	[dict setObject:minOpacity forKey:kPlayerViewMinOpacityKey];
 	[dict setObject:maxOpacity forKey:kPlayerViewMaxOpacityKey];
-	
+	[dict setObject:updateTime forKey:kPlayerUpdateTimeKey];
 	
 	NSUserDefaultsController *defaults = [NSUserDefaultsController sharedUserDefaultsController];
 	[defaults setInitialValues:dict];

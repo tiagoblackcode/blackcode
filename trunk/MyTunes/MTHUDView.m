@@ -6,11 +6,11 @@
 //  Copyright 2009 BlackCode. All rights reserved.
 //
 
-#import "MTPlayerView.h"
+#import "MTHUDView.h"
 
 #define kFadePeriod 0.05
 
-@implementation MTPlayerView
+@implementation MTHUDView
 
 @synthesize cachedView;
 
@@ -37,16 +37,22 @@
 		minAlphaValue = 0.0;
 		maxAlphaValue = 1.0;
 		alphaInc = (maxAlphaValue - minAlphaValue) * kFadePeriod;
+		[self setAlphaValue:minAlphaValue];
+		[self setNeedsDisplay:YES];
 		[self addTrackingArea:trackingArea];
+		[self setShadow:nil];
 		
 	}
 	return self;
 	
 }
 
+#pragma mark Setters and Getters
+
 - (void)setBackgroundColor:(NSColor *)new
 {
 
+	NSLog(@"setBackgroundColor:");
 	[new retain];
 	[backgroundColor release];
 	backgroundColor = new;
@@ -64,7 +70,6 @@
 
 - (void)setMinAlphaValue:(float)new
 {
-
 	minAlphaValue = new;
 	alphaInc = (maxAlphaValue - minAlphaValue) * 0.05;
 	[self setAlphaValue:minAlphaValue];
@@ -74,6 +79,10 @@
 - (NSColor*)backgroundColor { return backgroundColor; }
 - (float)minAlphaValue { return minAlphaValue; }
 - (float)maxAlphaValue { return maxAlphaValue; }
+
+
+
+#pragma mark Event Handling
 
 - (void)updateTrackingAreas
 {
@@ -107,6 +116,7 @@
 
 - (void)mouseEntered:(NSEvent *)event
 {
+	NSLog(@"mouseEntered:");
 	[self fadeIn];		
 }
 
@@ -116,25 +126,9 @@
 	[self fadeOut];
 }
 
-- (void)cacheView
-{
-	NSRect frame = [self frame];
-	frame.origin.x = 0;
-	frame.origin.y = 0;
-	
-	[cachedView release];
-	cachedView = [[NSImage alloc] initWithSize:frame.size];
-	[cachedView lockFocus];
-		[[NSColor whiteColor] setStroke];
-		[[backgroundColor colorWithAlphaComponent:0.5] setFill];
-		NSBezierPath *path = [[NSBezierPath alloc] init];	
 
-		[path appendBezierPathWithRoundedRect:frame xRadius:10 yRadius:10];
-		[path fill];
-		[path stroke];
-		[path release];
-	[cachedView unlockFocus];
-}
+
+#pragma mark Fading 
 
 - (void)fadeIn
 {
@@ -177,10 +171,32 @@
 		[self setAlphaValue:minAlphaValue];
 		[fadeTimer invalidate];
 		fadeTimer = nil;
+
 	}
 	
 }
 
+#pragma mark Drawing
+
+- (void)cacheView
+{
+	NSRect frame = [self frame];
+	frame.origin.x = 0;
+	frame.origin.y = 0;
+	
+	[cachedView release];
+	cachedView = [[NSImage alloc] initWithSize:frame.size];
+	[cachedView lockFocus];
+	[[NSColor whiteColor] setStroke];
+	[[backgroundColor colorWithAlphaComponent:0.5] setFill];
+	NSBezierPath *path = [[NSBezierPath alloc] init];	
+	
+	[path appendBezierPathWithRoundedRect:frame xRadius:10 yRadius:10];
+	[path fill];
+	[path stroke];
+	[path release];
+	[cachedView unlockFocus];
+}
 
 - (void)drawRect:(NSRect)rect
 {
@@ -189,6 +205,7 @@
 		[self cacheView];
 	
 	[cachedView drawInRect:rect fromRect:NSZeroRect operation:NSCompositeCopy fraction:[self alphaValue]];	
+	[[self window] invalidateShadow];
 }
 
 
