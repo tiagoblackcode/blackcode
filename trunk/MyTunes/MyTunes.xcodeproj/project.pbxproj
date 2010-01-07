@@ -18,7 +18,7 @@
 		F12DD8EE10DA99CD00747F73 /* DefaultPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12DD8ED10DA99CD00747F73 /* DefaultPlayer.xib */; };
 		F12DD96010DA9D1C00747F73 /* MTPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */; };
 		F12DD96610DA9E9300747F73 /* MTHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD96510DA9E9300747F73 /* MTHUDView.m */; };
-		F12DD9AD10DAA07000747F73 /* MTCloseButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD9AC10DAA07000747F73 /* MTCloseButtonView.m */; };
+		F12DD9AD10DAA07000747F73 /* MTTranslucentButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD9AC10DAA07000747F73 /* MTTranslucentButtonView.m */; };
 		F15EDCFA10DB13AF00A471F1 /* hud_titlebar-close.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */; };
 		F15EDD1B10DB221200A471F1 /* default-artwork.png in Resources */ = {isa = PBXBuildFile; fileRef = F15EDD1A10DB221200A471F1 /* default-artwork.png */; };
 		F15EDD8010DB23CD00A471F1 /* NSImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F15EDD7F10DB23CD00A471F1 /* NSImage+Additions.m */; };
@@ -27,6 +27,8 @@
 		F15EDF7110DBEF4500A471F1 /* EyeTunes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F15EDF6010DBEF1500A471F1 /* EyeTunes.framework */; };
 		F15EDFE110DC000B00A471F1 /* MTSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F15EDFE010DC000B00A471F1 /* MTSliderView.m */; };
 		F15EE0E310DD6B5400A471F1 /* MTHorizontalLine.m in Sources */ = {isa = PBXBuildFile; fileRef = F15EE0E210DD6B5400A471F1 /* MTHorizontalLine.m */; };
+		F18F9BBB10EB01AC0042A9AB /* MTHUDController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18F9BBA10EB01AC0042A9AB /* MTHUDController.m */; };
+		F18F9BBD10EB025B0042A9AB /* MTHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18F9BBC10EB025B0042A9AB /* MTHUD.xib */; };
 		F19A481410DC435B00DF5287 /* MTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19A481310DC435B00DF5287 /* MTInfoView.m */; };
 		F1A9176D10DEAB1A007D37E4 /* MTUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = F1A9176C10DEAB1A007D37E4 /* MTUtils.c */; };
 		F1B3697B10E2A42500CEBAA4 /* ratingDot.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B3697910E2A42500CEBAA4 /* ratingDot.png */; };
@@ -71,8 +73,8 @@
 		F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlayerWindow.m; sourceTree = "<group>"; };
 		F12DD96410DA9E9300747F73 /* MTHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHUDView.h; sourceTree = "<group>"; };
 		F12DD96510DA9E9300747F73 /* MTHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHUDView.m; sourceTree = "<group>"; };
-		F12DD9AB10DAA07000747F73 /* MTCloseButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCloseButtonView.h; sourceTree = "<group>"; };
-		F12DD9AC10DAA07000747F73 /* MTCloseButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCloseButtonView.m; sourceTree = "<group>"; };
+		F12DD9AB10DAA07000747F73 /* MTTranslucentButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTranslucentButtonView.h; sourceTree = "<group>"; };
+		F12DD9AC10DAA07000747F73 /* MTTranslucentButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTranslucentButtonView.m; sourceTree = "<group>"; };
 		F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_titlebar-close.tiff"; sourceTree = "<group>"; };
 		F15EDD1A10DB221200A471F1 /* default-artwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-artwork.png"; sourceTree = "<group>"; };
 		F15EDD7E10DB23CD00A471F1 /* NSImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Additions.h"; sourceTree = "<group>"; };
@@ -84,6 +86,9 @@
 		F15EDFE010DC000B00A471F1 /* MTSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSliderView.m; sourceTree = "<group>"; };
 		F15EE0E110DD6B5400A471F1 /* MTHorizontalLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHorizontalLine.h; sourceTree = "<group>"; };
 		F15EE0E210DD6B5400A471F1 /* MTHorizontalLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHorizontalLine.m; sourceTree = "<group>"; };
+		F18F9BB910EB01AC0042A9AB /* MTHUDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHUDController.h; sourceTree = "<group>"; };
+		F18F9BBA10EB01AC0042A9AB /* MTHUDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHUDController.m; sourceTree = "<group>"; };
+		F18F9BBC10EB025B0042A9AB /* MTHUD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTHUD.xib; sourceTree = "<group>"; };
 		F19A481210DC435B00DF5287 /* MTInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTInfoView.h; sourceTree = "<group>"; };
 		F19A481310DC435B00DF5287 /* MTInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTInfoView.m; sourceTree = "<group>"; };
 		F1A9176B10DEAB1A007D37E4 /* MTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUtils.h; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				F12DD8EA10DA997800747F73 /* Preferences.xib */,
 				F12DD8ED10DA99CD00747F73 /* DefaultPlayer.xib */,
+				F18F9BBC10EB025B0042A9AB /* MTHUD.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -210,8 +216,8 @@
 				F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */,
 				F12DD96410DA9E9300747F73 /* MTHUDView.h */,
 				F12DD96510DA9E9300747F73 /* MTHUDView.m */,
-				F12DD9AB10DAA07000747F73 /* MTCloseButtonView.h */,
-				F12DD9AC10DAA07000747F73 /* MTCloseButtonView.m */,
+				F12DD9AB10DAA07000747F73 /* MTTranslucentButtonView.h */,
+				F12DD9AC10DAA07000747F73 /* MTTranslucentButtonView.m */,
 				F15EDEBA10DBD93B00A471F1 /* MTImageView.h */,
 				F15EDEBB10DBD93B00A471F1 /* MTImageView.m */,
 				F15EDFDF10DC000B00A471F1 /* MTSliderView.h */,
@@ -231,6 +237,8 @@
 			children = (
 				F12DD8E710DA98D600747F73 /* MTPlayerController.h */,
 				F12DD8E810DA98D600747F73 /* MTPlayerController.m */,
+				F18F9BB910EB01AC0042A9AB /* MTHUDController.h */,
+				F18F9BBA10EB01AC0042A9AB /* MTHUDController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 				F15EDD1B10DB221200A471F1 /* default-artwork.png in Resources */,
 				F1B3697B10E2A42500CEBAA4 /* ratingDot.png in Resources */,
 				F1B3697C10E2A42500CEBAA4 /* ratingStar.png in Resources */,
+				F18F9BBD10EB025B0042A9AB /* MTHUD.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +330,7 @@
 				F12DD8E910DA98D600747F73 /* MTPlayerController.m in Sources */,
 				F12DD96010DA9D1C00747F73 /* MTPlayerWindow.m in Sources */,
 				F12DD96610DA9E9300747F73 /* MTHUDView.m in Sources */,
-				F12DD9AD10DAA07000747F73 /* MTCloseButtonView.m in Sources */,
+				F12DD9AD10DAA07000747F73 /* MTTranslucentButtonView.m in Sources */,
 				F15EDD8010DB23CD00A471F1 /* NSImage+Additions.m in Sources */,
 				F15EDEBC10DBD93B00A471F1 /* MTImageView.m in Sources */,
 				F15EDFE110DC000B00A471F1 /* MTSliderView.m in Sources */,
@@ -329,6 +338,7 @@
 				F15EE0E310DD6B5400A471F1 /* MTHorizontalLine.m in Sources */,
 				F1A9176D10DEAB1A007D37E4 /* MTUtils.c in Sources */,
 				F1B3698F10E2A5ED00CEBAA4 /* MTStarView.m in Sources */,
+				F18F9BBB10EB01AC0042A9AB /* MTHUDController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
