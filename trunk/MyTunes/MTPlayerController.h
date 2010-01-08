@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class MTHUDController;
+@class MTStarView;
 @class MTCloseButtonView;
 @class MTHUDView;
 @class MTHorizontalLine;
@@ -16,20 +18,22 @@
 @class ETTrack;
 
 @interface MTPlayerController : NSWindowController {
-
-	MTCloseButtonView *closeButton;
-	MTHUDView *playerView;
+	
+	IBOutlet MTStarView *starView;
 	IBOutlet MTImageView *artworkImage;
 	IBOutlet MTSliderView *sliderView;
 	IBOutlet MTHorizontalLine *horizontalLine;
 	IBOutlet NSTextField *trackTextView;
 	IBOutlet NSTextField *artistTextView;
 	IBOutlet NSTextField *albumTextView;
-	
+	IBOutlet NSSegmentedControl *playerControls;
+
+	MTHUDController *hudController;
 	
 	NSImage *defaultArtwork;
 	NSTimer *updateTimer;
 	BOOL needsUpdate;
+	BOOL hideWhenIdle;
 	
 	ETTrack		*currentTrack;
 	DescType	currentState;

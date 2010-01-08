@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface MTHorizontalLine : NSBox {
+@interface MTHorizontalLine : NSControl {
 	
 	NSColor *lineColor;
 

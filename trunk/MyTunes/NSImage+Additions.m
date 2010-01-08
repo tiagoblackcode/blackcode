@@ -49,7 +49,7 @@
 				  fraction:1.0];
 	[result unlockFocus];
 	[reflection release];
-	return result;
+	return [result autorelease];
 	
 	
 }

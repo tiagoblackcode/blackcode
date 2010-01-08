@@ -20,7 +20,7 @@
 	aStyle = NSBorderlessWindowMask;
 	self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
 	if( self ) {		
-		[self setLevel:kCGDesktopWindowLevel];
+		[self setLevel:kCGDesktopWindowLevel+1];
 		[self setShouldTerminateApplication:YES];
 		[self setBackgroundColor:[NSColor clearColor]];
 		[self setOpaque:NO];
@@ -42,6 +42,17 @@
 {
 	return YES;
 }
+//
+//- (BOOL)acceptsMouseMovedEvents
+//{
+//	return YES;
+//}
+//
+//- (void)mouseEntered:(NSEvent *)theEvent
+//{
+//
+//	NSLog(@"window::mouseEntered:");
+//}
 
 
 

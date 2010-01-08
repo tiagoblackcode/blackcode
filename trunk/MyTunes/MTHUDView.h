@@ -10,25 +10,24 @@
 
 @interface MTHUDView : NSView {
 	
-	NSColor *backgroundColor;
+	NSResponder *controller;
+
 	NSImage *cachedView;
-	NSTrackingArea *trackingArea;
-	NSTimer *fadeTimer;
+	NSColor *strokeColor;
+	NSColor *backgroundColor;
 	
-	float minAlphaValue;
-	float maxAlphaValue;
-	float alphaInc;
+	NSTrackingArea *trackingArea;
+	
 
 }
 
 - (void)cacheView;
-- (void)fadeIn;
-- (void)fadeOut;
+- (void)setStrokeColor:(NSColor *)color;
+- (void)setBackgroundColor:(NSColor *)color;
+- (NSColor*)backgroundColor;
+- (NSColor*)strokeColor;
 
-
-@property (assign) float minAlphaValue;
-@property (assign) float maxAlphaValue;
 @property (retain) NSImage *cachedView;
-@property (retain) NSColor *backgroundColor;
+@property (retain) NSResponder *controller;
 
 @end

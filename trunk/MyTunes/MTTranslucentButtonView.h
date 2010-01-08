@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface MTCloseButtonView : NSButton {
+@interface MTTranslucentButtonView : NSButton {
 	
 }
 

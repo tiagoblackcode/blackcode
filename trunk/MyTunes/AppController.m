@@ -37,7 +37,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification
 {
-	NSLog(@"applicationDidFinishLaunching:");	
+	//NSLog(@"applicationDidFinishLaunching:");	
 }
 
 @end

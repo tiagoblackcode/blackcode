@@ -7,5 +7,13 @@
  *
  */
 
+#define DEBUG
+#ifdef DEBUG
+	#define MTLog( ... ) NSLog( __VA_ARGS__ )
+#else
+	#define MTLog( ... ) do {} while(0)
+#endif
 
 #define MTMax( v1, v2 ) v1 >= v2 ? v1 : v2
+
+#define MTUDControllerKey(key) [NSString stringWithFormat:@"values.%@", key]

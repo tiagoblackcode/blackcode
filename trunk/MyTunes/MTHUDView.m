@@ -8,40 +8,20 @@
 
 #import "MTHUDView.h"
 
-#define kFadePeriod 0.05
-
 @implementation MTHUDView
 
 @synthesize cachedView;
+@synthesize controller;
 
-+ (void)initialize
-{
-	
-	[self exposeBinding:@"backgroundColor"];
-	[self exposeBinding:@"minAlphaValue"];
-	[self exposeBinding:@"maxAlphaValue"];
-}
+
 
 - (id)initWithFrame:(NSRect)frame
 {
 	self = [super initWithFrame:frame];
 	if( self ) {
-		
-		trackingArea = 
-		[[NSTrackingArea alloc] initWithRect:[self frame] 
-									 options:(NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways | NSTrackingMouseMoved) 
-									   owner:self 
-									userInfo:nil];
-
-		cachedView = nil;
-		minAlphaValue = 0.0;
-		maxAlphaValue = 1.0;
-		alphaInc = (maxAlphaValue - minAlphaValue) * kFadePeriod;
-		[self setAlphaValue:minAlphaValue];
-		[self setNeedsDisplay:YES];
-		[self addTrackingArea:trackingArea];
-		[self setShadow:nil];
-		
+		backgroundColor = [NSColor blackColor];
+		strokeColor = [NSColor whiteColor];
+		[self updateTrackingAreas];		
 	}
 	return self;
 	
@@ -51,35 +31,24 @@
 
 - (void)setBackgroundColor:(NSColor *)new
 {
-
-	NSLog(@"setBackgroundColor:");
+//	NSLog(@"setBackgroundColor:");
 	[new retain];
 	[backgroundColor release];
 	backgroundColor = new;
 	[self setCachedView:nil];
-	[self setNeedsDisplay:YES];
 	
 }
 
-- (void)setMaxAlphaValue:(float)new
+- (void)setStrokeColor:(NSColor *)color
 {
-	maxAlphaValue = new;
-	alphaInc = (maxAlphaValue - minAlphaValue) * kFadePeriod;
-	[self setNeedsDisplay:YES];
+	[color retain];
+	[strokeColor release];
+	strokeColor = color;
+	[self setCachedView:nil];
 }
 
-- (void)setMinAlphaValue:(float)new
-{
-	minAlphaValue = new;
-	alphaInc = (maxAlphaValue - minAlphaValue) * 0.05;
-	[self setAlphaValue:minAlphaValue];
-	[self setNeedsDisplay:YES];
-}
-
+- (NSColor*)strokeColor { return strokeColor; }
 - (NSColor*)backgroundColor { return backgroundColor; }
-- (float)minAlphaValue { return minAlphaValue; }
-- (float)maxAlphaValue { return maxAlphaValue; }
-
 
 
 #pragma mark Event Handling
@@ -87,94 +56,35 @@
 - (void)updateTrackingAreas
 {
 	[super updateTrackingAreas];
-	NSLog(@"updateTrackingAreas");
 	[self removeTrackingArea:trackingArea];
 	[trackingArea release];
 	trackingArea = 
 	[[NSTrackingArea alloc] initWithRect:[self frame] 
-								 options:(NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways | NSTrackingMouseMoved) 
+								 options:(NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways | NSTrackingAssumeInside) 
 								   owner:self 
 								userInfo:nil];
 	[self addTrackingArea:trackingArea];
 }
 
 
-
-
-- (void)orderOut:(id)sender
-{
-	[[self window] orderOut:sender];
-	NSLog(@"orderOut:");
-	
-}
-
-- (void)rightMouseDown:(NSEvent *)theEvent
-{
-	NSLog(@"rightMouseDown:");
-}
-
-
 - (void)mouseEntered:(NSEvent *)event
 {
-	NSLog(@"mouseEntered:");
-	[self fadeIn];		
+
+	[controller mouseEntered:event];
+	[[self nextResponder] mouseExited:event];
+
 }
 
 
 - (void)mouseExited:(NSEvent *)event
 {
-	[self fadeOut];
+	
+	[controller mouseExited:event];
+	[[self nextResponder] mouseExited:event];
+
 }
 
 
-
-#pragma mark Fading 
-
-- (void)fadeIn
-{
-	if( [self alphaValue] >= maxAlphaValue)
-		return;
-	
-	NSNumber *number = [NSNumber numberWithFloat:alphaInc];
-	[fadeTimer invalidate];
-	fadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.010 
-												 target:self 
-											   selector:@selector(fadeTimer:) 
-											   userInfo:number repeats:YES];
-}
-
-- (void)fadeOut
-{
-	if( [self alphaValue] <= minAlphaValue )
-		return;
-	
-	NSNumber *number = [NSNumber numberWithFloat:-1*alphaInc];
-	[fadeTimer invalidate];
-	fadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.010 
-												 target:self 
-											   selector:@selector(fadeTimer:) 
-											   userInfo:number repeats:YES];
-}
-
-- (void)fadeTimer:(NSTimer*)timer
-{
-	[self setAlphaValue:[self alphaValue]+[[timer userInfo] floatValue]];
-	[self setNeedsDisplay:YES];
-	
-	if( [self alphaValue] >= maxAlphaValue ) {
-		[self setAlphaValue:maxAlphaValue];
-		[fadeTimer invalidate];
-		fadeTimer = nil;
-	}
-	
-	if( [self alphaValue] <= minAlphaValue ) {
-		[self setAlphaValue:minAlphaValue];
-		[fadeTimer invalidate];
-		fadeTimer = nil;
-
-	}
-	
-}
 
 #pragma mark Drawing
 
@@ -187,7 +97,7 @@
 	[cachedView release];
 	cachedView = [[NSImage alloc] initWithSize:frame.size];
 	[cachedView lockFocus];
-	[[NSColor whiteColor] setStroke];
+	[strokeColor setStroke];
 	[[backgroundColor colorWithAlphaComponent:0.5] setFill];
 	NSBezierPath *path = [[NSBezierPath alloc] init];	
 	

@@ -44,4 +44,16 @@
 	[path stroke];
 }
 
+- (void)drawDiamond:(NSRect)diamondRect
+{
+	[[NSColor whiteColor] set];
+	NSRectFill(diamondRect);
+
+}
+
+- (void)mouseDown:(NSEvent *)theEvent
+{
+	
+}
+
 @end
