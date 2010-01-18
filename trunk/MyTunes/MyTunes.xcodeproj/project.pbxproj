@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F12DD8E310DA97BE00747F73 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD8E210DA97BE00747F73 /* AppController.m */; };
+		F12DD8E610DA987500747F73 /* MTPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD8E510DA987500747F73 /* MTPreferencesController.m */; };
+		F12DD8E910DA98D600747F73 /* MTPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD8E810DA98D600747F73 /* MTPlayerController.m */; };
+		F12DD8EB10DA997800747F73 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12DD8EA10DA997800747F73 /* Preferences.xib */; };
+		F12DD8EE10DA99CD00747F73 /* DefaultPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12DD8ED10DA99CD00747F73 /* DefaultPlayer.xib */; };
+		F12DD96010DA9D1C00747F73 /* MTPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */; };
+		F12DD96610DA9E9300747F73 /* MTHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DD96510DA9E9300747F73 /* MTHUDView.m */; };
+		F157B2E910F7F3EE0036D017 /* MTITunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F157B2E810F7F3EE0036D017 /* MTITunesController.m */; };
+		F15EDCFA10DB13AF00A471F1 /* hud_titlebar-close.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */; };
+		F15EDD8010DB23CD00A471F1 /* NSImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F15EDD7F10DB23CD00A471F1 /* NSImage+Additions.m */; };
+		F15EDEBC10DBD93B00A471F1 /* MTImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F15EDEBB10DBD93B00A471F1 /* MTImageView.m */; };
+		F15EDF6110DBEF1500A471F1 /* EyeTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15EDF6010DBEF1500A471F1 /* EyeTunes.framework */; };
+		F15EDF7110DBEF4500A471F1 /* EyeTunes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F15EDF6010DBEF1500A471F1 /* EyeTunes.framework */; };
+		F15EE0E310DD6B5400A471F1 /* MTHorizontalLine.m in Sources */ = {isa = PBXBuildFile; fileRef = F15EE0E210DD6B5400A471F1 /* MTHorizontalLine.m */; };
+		F1852B4D10FD5130000BFB84 /* MTSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1852B4C10FD5130000BFB84 /* MTSliderCell.m */; };
+		F1852BA210FD584D000BFB84 /* NSSlider+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1852BA110FD584D000BFB84 /* NSSlider+Additions.m */; };
+		F18F9BBB10EB01AC0042A9AB /* MTHUDController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18F9BBA10EB01AC0042A9AB /* MTHUDController.m */; };
+		F19A481410DC435B00DF5287 /* MTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19A481310DC435B00DF5287 /* MTInfoView.m */; };
+		F1A5375610FD364B00EA222A /* default-artwork.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A5375510FD364B00EA222A /* default-artwork.png */; };
+		F1A9176D10DEAB1A007D37E4 /* MTUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = F1A9176C10DEAB1A007D37E4 /* MTUtils.c */; };
+		F1B3697B10E2A42500CEBAA4 /* ratingDot.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B3697910E2A42500CEBAA4 /* ratingDot.png */; };
+		F1B3697C10E2A42500CEBAA4 /* ratingStar.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B3697A10E2A42500CEBAA4 /* ratingStar.png */; };
+		F1B3698F10E2A5ED00CEBAA4 /* MTStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B3698E10E2A5ED00CEBAA4 /* MTStarView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F15EDF7310DBEF6600A471F1 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F15EDF7110DBEF4500A471F1 /* EyeTunes.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* MyTunes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTunes_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* MyTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12DD8E110DA97BE00747F73 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		F12DD8E210DA97BE00747F73 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		F12DD8E410DA987500747F73 /* MTPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPreferencesController.h; sourceTree = "<group>"; };
+		F12DD8E510DA987500747F73 /* MTPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPreferencesController.m; sourceTree = "<group>"; };
+		F12DD8E710DA98D600747F73 /* MTPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlayerController.h; sourceTree = "<group>"; };
+		F12DD8E810DA98D600747F73 /* MTPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlayerController.m; sourceTree = "<group>"; };
+		F12DD8EA10DA997800747F73 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		F12DD8ED10DA99CD00747F73 /* DefaultPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultPlayer.xib; sourceTree = "<group>"; };
+		F12DD95E10DA9D1C00747F73 /* MTPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlayerWindow.h; sourceTree = "<group>"; };
+		F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlayerWindow.m; sourceTree = "<group>"; };
+		F12DD96410DA9E9300747F73 /* MTHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHUDView.h; sourceTree = "<group>"; };
+		F12DD96510DA9E9300747F73 /* MTHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHUDView.m; sourceTree = "<group>"; };
+		F157B2E710F7F3EE0036D017 /* MTITunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTITunesController.h; sourceTree = "<group>"; };
+		F157B2E810F7F3EE0036D017 /* MTITunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTITunesController.m; sourceTree = "<group>"; };
+		F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_titlebar-close.tiff"; sourceTree = "<group>"; };
+		F15EDD1A10DB221200A471F1 /* default-artwork-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-artwork-white.png"; sourceTree = "<group>"; };
+		F15EDD7E10DB23CD00A471F1 /* NSImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Additions.h"; sourceTree = "<group>"; };
+		F15EDD7F10DB23CD00A471F1 /* NSImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Additions.m"; sourceTree = "<group>"; };
+		F15EDEBA10DBD93B00A471F1 /* MTImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageView.h; sourceTree = "<group>"; };
+		F15EDEBB10DBD93B00A471F1 /* MTImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageView.m; sourceTree = "<group>"; };
+		F15EDF6010DBEF1500A471F1 /* EyeTunes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EyeTunes.framework; sourceTree = "<group>"; };
+		F15EE0E110DD6B5400A471F1 /* MTHorizontalLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHorizontalLine.h; sourceTree = "<group>"; };
+		F15EE0E210DD6B5400A471F1 /* MTHorizontalLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHorizontalLine.m; sourceTree = "<group>"; };
+		F1852B4B10FD5130000BFB84 /* MTSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSliderCell.h; sourceTree = "<group>"; };
+		F1852B4C10FD5130000BFB84 /* MTSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSliderCell.m; sourceTree = "<group>"; };
+		F1852BA010FD584D000BFB84 /* NSSlider+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSlider+Additions.h"; sourceTree = "<group>"; };
+		F1852BA110FD584D000BFB84 /* NSSlider+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSlider+Additions.m"; sourceTree = "<group>"; };
+		F18F9BB910EB01AC0042A9AB /* MTHUDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHUDController.h; sourceTree = "<group>"; };
+		F18F9BBA10EB01AC0042A9AB /* MTHUDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHUDController.m; sourceTree = "<group>"; };
+		F19A481210DC435B00DF5287 /* MTInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTInfoView.h; sourceTree = "<group>"; };
+		F19A481310DC435B00DF5287 /* MTInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTInfoView.m; sourceTree = "<group>"; };
+		F1A5375510FD364B00EA222A /* default-artwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-artwork.png"; sourceTree = "<group>"; };
+		F1A9176B10DEAB1A007D37E4 /* MTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUtils.h; sourceTree = "<group>"; };
+		F1A9176C10DEAB1A007D37E4 /* MTUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MTUtils.c; sourceTree = "<group>"; };
+		F1B3697910E2A42500CEBAA4 /* ratingDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratingDot.png; sourceTree = "<group>"; };
+		F1B3697A10E2A42500CEBAA4 /* ratingStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratingStar.png; sourceTree = "<group>"; };
+		F1B3698D10E2A5ED00CEBAA4 /* MTStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStarView.h; sourceTree = "<group>"; };
+		F1B3698E10E2A5ED00CEBAA4 /* MTStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStarView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				F15EDF6110DBEF1500A471F1 /* EyeTunes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F1B4E81210E1A1840020C0CF /* Additions */,
+				F1B4E80A10E1A1690020C0CF /* Preferences */,
+				F12DD93C10DA9B4F00747F73 /* Player */,
+				F12DD8E110DA97BE00747F73 /* AppController.h */,
+				F12DD8E210DA97BE00747F73 /* AppController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F15EDF6010DBEF1500A471F1 /* EyeTunes.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* MyTunes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* MyTunes */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = MyTunes;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* MyTunes_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				F1A9176B10DEAB1A007D37E4 /* MTUtils.h */,
+				F1A9176C10DEAB1A007D37E4 /* MTUtils.c */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1A5375510FD364B00EA222A /* default-artwork.png */,
+				F1B3697910E2A42500CEBAA4 /* ratingDot.png */,
+				F1B3697A10E2A42500CEBAA4 /* ratingStar.png */,
+				F15EDD1A10DB221200A471F1 /* default-artwork-white.png */,
+				F15EDCF910DB13AF00A471F1 /* hud_titlebar-close.tiff */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				F12DD8EA10DA997800747F73 /* Preferences.xib */,
+				F12DD8ED10DA99CD00747F73 /* DefaultPlayer.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F12DD93C10DA9B4F00747F73 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				F1B4E80910E1A1520020C0CF /* Controller */,
+				F1B4E80810E1A1390020C0CF /* View */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		F1B4E80810E1A1390020C0CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F12DD95E10DA9D1C00747F73 /* MTPlayerWindow.h */,
+				F12DD95F10DA9D1C00747F73 /* MTPlayerWindow.m */,
+				F12DD96410DA9E9300747F73 /* MTHUDView.h */,
+				F12DD96510DA9E9300747F73 /* MTHUDView.m */,
+				F15EDEBA10DBD93B00A471F1 /* MTImageView.h */,
+				F15EDEBB10DBD93B00A471F1 /* MTImageView.m */,
+				F19A481210DC435B00DF5287 /* MTInfoView.h */,
+				F19A481310DC435B00DF5287 /* MTInfoView.m */,
+				F15EE0E110DD6B5400A471F1 /* MTHorizontalLine.h */,
+				F15EE0E210DD6B5400A471F1 /* MTHorizontalLine.m */,
+				F1B3698D10E2A5ED00CEBAA4 /* MTStarView.h */,
+				F1B3698E10E2A5ED00CEBAA4 /* MTStarView.m */,
+				F1852B4B10FD5130000BFB84 /* MTSliderCell.h */,
+				F1852B4C10FD5130000BFB84 /* MTSliderCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F1B4E80910E1A1520020C0CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F157B2E710F7F3EE0036D017 /* MTITunesController.h */,
+				F157B2E810F7F3EE0036D017 /* MTITunesController.m */,
+				F12DD8E710DA98D600747F73 /* MTPlayerController.h */,
+				F12DD8E810DA98D600747F73 /* MTPlayerController.m */,
+				F18F9BB910EB01AC0042A9AB /* MTHUDController.h */,
+				F18F9BBA10EB01AC0042A9AB /* MTHUDController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F1B4E80A10E1A1690020C0CF /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				F12DD8E410DA987500747F73 /* MTPreferencesController.h */,
+				F12DD8E510DA987500747F73 /* MTPreferencesController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		F1B4E81210E1A1840020C0CF /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				F15EDD7E10DB23CD00A471F1 /* NSImage+Additions.h */,
+				F15EDD7F10DB23CD00A471F1 /* NSImage+Additions.m */,
+				F1852BA010FD584D000BFB84 /* NSSlider+Additions.h */,
+				F1852BA110FD584D000BFB84 /* NSSlider+Additions.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* MyTunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MyTunes" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				F15EDF7310DBEF6600A471F1 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTunes;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MyTunes;
+			productReference = 8D1107320486CEB800E47090 /* MyTunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MyTunes" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* MyTunes */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* MyTunes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1A5375610FD364B00EA222A /* default-artwork.png in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				F12DD8EB10DA997800747F73 /* Preferences.xib in Resources */,
+				F12DD8EE10DA99CD00747F73 /* DefaultPlayer.xib in Resources */,
+				F15EDCFA10DB13AF00A471F1 /* hud_titlebar-close.tiff in Resources */,
+				F1B3697B10E2A42500CEBAA4 /* ratingDot.png in Resources */,
+				F1B3697C10E2A42500CEBAA4 /* ratingStar.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				F12DD8E310DA97BE00747F73 /* AppController.m in Sources */,
+				F12DD8E610DA987500747F73 /* MTPreferencesController.m in Sources */,
+				F12DD8E910DA98D600747F73 /* MTPlayerController.m in Sources */,
+				F12DD96010DA9D1C00747F73 /* MTPlayerWindow.m in Sources */,
+				F12DD96610DA9E9300747F73 /* MTHUDView.m in Sources */,
+				F15EDD8010DB23CD00A471F1 /* NSImage+Additions.m in Sources */,
+				F15EDEBC10DBD93B00A471F1 /* MTImageView.m in Sources */,
+				F19A481410DC435B00DF5287 /* MTInfoView.m in Sources */,
+				F15EE0E310DD6B5400A471F1 /* MTHorizontalLine.m in Sources */,
+				F1A9176D10DEAB1A007D37E4 /* MTUtils.c in Sources */,
+				F1B3698F10E2A5ED00CEBAA4 /* MTStarView.m in Sources */,
+				F18F9BBB10EB01AC0042A9AB /* MTHUDController.m in Sources */,
+				F157B2E910F7F3EE0036D017 /* MTITunesController.m in Sources */,
+				F1852B4D10FD5130000BFB84 /* MTSliderCell.m in Sources */,
+				F1852BA210FD584D000BFB84 /* NSSlider+Additions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Projects/EyeTunes/build/Release\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MyTunes_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = MyTunes;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Projects/EyeTunes/build/Release\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MyTunes_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = MyTunes;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MyTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MyTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
