@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* AgendaiPhoneAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1015, 646}}";
+			sepNavSelRange = "{430, 0}";
+			sepNavVisRange = "{0, 574}";
+			sepNavWindowFrame = "{{15, 4}, {1074, 774}}";
+		};
+	};
+	1D3623250D0F684500981E51 /* AgendaiPhoneAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1015, 2509}}";
+			sepNavSelRange = "{1834, 0}";
+			sepNavVisRange = "{1113, 1228}";
+			sepNavWindowFrame = "{{134, 4}, {1074, 774}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* AgendaiPhone */ = {
+		activeExec = 0;
+		executables = (
+			F1A7159912355DFA0051866A /* AgendaiPhone */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = F1A7159912355DFA0051866A /* AgendaiPhone */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* AgendaiPhone */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* AgendaiPhone */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = F1A715A412355DFE0051866A /* Code sense */;
+		executables = (
+			F1A7159912355DFA0051866A /* AgendaiPhone */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 311882483;
+			PBXWorkspaceStateSaveDate = 311882483;
+		};
+		perUserProjectItems = {
+			F1711DAB1296EDDB0081C26D = F1711DAB1296EDDB0081C26D /* PBXTextBookmark */;
+			F1711DAC1296EDDB0081C26D = F1711DAC1296EDDB0081C26D /* PBXTextBookmark */;
+			F1711DAD1296EDDB0081C26D = F1711DAD1296EDDB0081C26D /* PBXTextBookmark */;
+		};
+		sourceControlManager = F1A715A312355DFE0051866A /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 646}}";
+			sepNavSelRange = "{157, 0}";
+			sepNavVisRange = "{0, 359}";
+			sepNavWindowFrame = "{{15, 4}, {823, 774}}";
+		};
+	};
+	F11727D3129192A400AE5941 /* ConcertAgenda.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {572, 623}}";
+			sepNavSelRange = "{785, 178}";
+			sepNavVisRange = "{0, 969}";
+		};
+	};
+	F11727D4129192A400AE5941 /* ConcertAgenda.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {572, 4537}}";
+			sepNavSelRange = "{4335, 0}";
+			sepNavVisRange = "{259, 1184}";
+			sepNavWindowFrame = "{{533, 4}, {631, 774}}";
+		};
+	};
+	F11F430812968E380015EC92 /* NSObject+Delegation.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 646}}";
+			sepNavSelRange = "{214, 74}";
+			sepNavVisRange = "{0, 462}";
+			sepNavWindowFrame = "{{222, 4}, {823, 774}}";
+		};
+	};
+	F11F430912968E380015EC92 /* NSObject+Delegation.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {572, 1040}}";
+			sepNavSelRange = "{965, 0}";
+			sepNavVisRange = "{632, 887}";
+			sepNavWindowFrame = "{{15, 4}, {631, 774}}";
+		};
+	};
+	F12861A91235BDA5005BD34E /* CSSSelector.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {968, 948}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2136}";
+			sepNavWindowFrame = "{{543, 7}, {1027, 1099}}";
+		};
+	};
+	F12861AD1235BDA5005BD34E /* CSSSelectorPart.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {968, 971}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2248}";
+			sepNavWindowFrame = "{{15, 74}, {1027, 1099}}";
+		};
+	};
+	F12861B11235BDA5005BD34E /* DocumentRoot.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {968, 948}}";
+			sepNavSelRange = "{994, 7}";
+			sepNavVisRange = "{0, 1011}";
+			sepNavWindowFrame = "{{819, 34}, {1027, 1099}}";
+		};
+	};
+	F12861B21235BDA5005BD34E /* DocumentRoot.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {968, 948}}";
+			sepNavSelRange = "{1215, 0}";
+			sepNavVisRange = "{0, 1292}";
+			sepNavWindowFrame = "{{819, 34}, {1027, 1099}}";
+		};
+	};
+	F12861B31235BDA5005BD34E /* Element.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {968, 3302}}";
+			sepNavSelRange = "{3440, 12}";
+			sepNavVisRange = "{4767, 1073}";
+			sepNavWindowFrame = "{{253, 4}, {1027, 774}}";
+		};
+	};
+	F12861B41235BDA5005BD34E /* Element.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {968, 3757}}";
+			sepNavSelRange = "{1082, 24}";
+			sepNavVisRange = "{1433, 1826}";
+		};
+	};
+	F1711D671296E0720081C26D /* Event.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {653, 623}}";
+			sepNavSelRange = "{197, 89}";
+			sepNavVisRange = "{0, 533}";
+			sepNavWindowFrame = "{{775, 4}, {712, 774}}";
+		};
+	};
+	F1711D681296E0720081C26D /* Event.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {572, 623}}";
+			sepNavSelRange = "{233, 0}";
+			sepNavVisRange = "{0, 233}";
+			sepNavWindowFrame = "{{15, 4}, {631, 774}}";
+		};
+	};
+	F1711DAB1296EDDB0081C26D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F19F8A8E1240F11B00590342 /* HighlightsTableViewController.h */;
+		name = "HighlightsTableViewController.h: 14";
+		rLen = 0;
+		rLoc = 274;
+		rType = 0;
+		vrLen = 336;
+		vrLoc = 0;
+	};
+	F1711DAC1296EDDB0081C26D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F19F8A8F1240F11B00590342 /* HighlightsTableViewController.m */;
+		name = "HighlightsTableViewController.m: 142";
+		rLen = 0;
+		rLoc = 3203;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 1458;
+	};
+	F1711DAD1296EDDB0081C26D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F19F8A8F1240F11B00590342 /* HighlightsTableViewController.m */;
+		name = "HighlightsTableViewController.m: 151";
+		rLen = 0;
+		rLoc = 3483;
+		rType = 0;
+		vrLen = 1085;
+		vrLoc = 1504;
+	};
+	F19F8A8E1240F11B00590342 /* HighlightsTableViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1015, 623}}";
+			sepNavSelRange = "{274, 0}";
+			sepNavVisRange = "{0, 336}";
+		};
+	};
+	F19F8A8F1240F11B00590342 /* HighlightsTableViewController.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{6012, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{6063, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{6113, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 6809}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1069, 3510}}";
+			sepNavSelRange = "{3483, 0}";
+			sepNavVisRange = "{1504, 1085}";
+			sepNavWindowFrame = "{{206, 4}, {1074, 774}}";
+		};
+	};
+	F1A7159912355DFA0051866A /* AgendaiPhone */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = AgendaiPhone;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	F1A715A312355DFE0051866A /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = BlackCode;
+			};
+		};
+	};
+	F1A715A412355DFE0051866A /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	F1ADC4AE128DAE6D00A80E14 /* ParseHighlightsOperation.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {803, 623}}";
+			sepNavSelRange = "{249, 14}";
+			sepNavVisRange = "{0, 281}";
+			sepNavWindowFrame = "{{18, 4}, {862, 774}}";
+		};
+	};
+	F1ADC4AF128DAE6D00A80E14 /* ParseHighlightsOperation.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {908, 2171}}";
+			sepNavSelRange = "{599, 0}";
+			sepNavVisRange = "{147, 1004}";
+			sepNavWindowFrame = "{{18, 4}, {862, 774}}";
+		};
+	};
+	F1ADC4BB128DB22100A80E14 /* ParseOperation.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 623}}";
+			sepNavSelRange = "{383, 0}";
+			sepNavVisRange = "{0, 704}";
+			sepNavWindowFrame = "{{157, 4}, {823, 774}}";
+		};
+	};
+	F1ADC4BC128DB22100A80E14 /* ParseOperation.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 623}}";
+			sepNavSelRange = "{369, 0}";
+			sepNavVisRange = "{0, 471}";
+			sepNavWindowFrame = "{{157, 4}, {823, 774}}";
+		};
+	};
+	F1D34A3F1295904E00EA803F /* DownloadOperation.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 623}}";
+			sepNavSelRange = "{346, 0}";
+			sepNavVisRange = "{0, 673}";
+			sepNavWindowFrame = "{{15, 4}, {823, 774}}";
+		};
+	};
+	F1D34A401295904E00EA803F /* DownloadOperation.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 1378}}";
+			sepNavSelRange = "{1271, 0}";
+			sepNavVisRange = "{979, 910}";
+			sepNavWindowFrame = "{{572, 4}, {630, 774}}";
+		};
+	};
+}
